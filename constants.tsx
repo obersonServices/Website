@@ -1,12 +1,14 @@
-import { 
-  ShieldAlert, 
-  Users, 
-  FileText, 
-  CheckCircle, 
-  Fish, 
-  ScanEye, 
-  Cloud, 
-  Activity 
+import {
+  ShieldAlert,
+  Users,
+  FileText,
+  CheckCircle,
+  Fish,
+  ScanEye,
+  Cloud,
+  Activity,
+  Brain,
+  Camera
 } from 'lucide-react';
 import { Service, Exercise } from './types';
 
@@ -17,7 +19,7 @@ export const SERVICES: Service[] = [
     description: '24/7 real-time threat monitoring, detection, and incident response powered by advanced SIEM analytics.',
     fullDescription: 'Our Managed SOC acts as your always-on defensive shield. Utilizing state-of-the-art SIEM technology and human expertise, we ingest logs from your entire infrastructure to detect anomalies before they become breaches. Our analysts investigate alerts 24/7/365 to ensure your business never sleeps unprotected.',
     icon: ShieldAlert,
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=60',
     priority: 1,
     features: [
       '24/7/365 Real-Time Monitoring',
@@ -32,7 +34,18 @@ export const SERVICES: Service[] = [
       'Satisfy regulatory monitoring requirements',
       'Eliminate the cost of building an internal SOC'
     ],
-    whoIsItFor: ['Enterprises with 24/7 uptime needs', 'Regulated industries (Finance, Healthcare)', 'Organizations with limited internal security staff']
+    whoIsItFor: ['Enterprises with 24/7 uptime needs', 'Regulated industries (Finance, Healthcare)', 'Organizations with limited internal security staff'],
+    deliverables: [
+      'Monthly Threat Report',
+      'Real-time Dashboard Access',
+      'Incident Root Cause Analysis (RCA)',
+      'Quarterly Strategy Review'
+    ],
+    techSpecs: [
+      { label: 'SLA Response Time', value: '< 15 Minutes' },
+      { label: 'Log Retention', value: '365 Days Hot / 7 Years Cold' },
+      { label: 'Integrations', value: '400+ Supported Data Sources' }
+    ]
   },
   {
     id: 'workshops',
@@ -40,7 +53,7 @@ export const SERVICES: Service[] = [
     description: 'Interactive training and simulation exercises designed to test your resilience and team readiness.',
     fullDescription: 'We move beyond theory into practice. Our workshops and exercises are derived from military-grade playbooks to stress-test your people, processes, and technology. From C-suite tabletops to full-technical Red Team assaults, we validate your readiness.',
     icon: Users,
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=60',
     priority: 2,
     features: [
       'Custom Scenario Development (MSEL)',
@@ -55,7 +68,18 @@ export const SERVICES: Service[] = [
       'Identify "silent" process failures',
       'Build muscle memory for real crises'
     ],
-    whoIsItFor: ['Board & C-Suite', 'Incident Response Teams', 'IT Operations Staff']
+    whoIsItFor: ['Board & C-Suite', 'Incident Response Teams', 'IT Operations Staff'],
+    deliverables: [
+      'Exercise Plan (ExPlan)',
+      'Master Scenario Events List (MSEL)',
+      'After Action Report (AAR)',
+      'Improvement Plan (IP)'
+    ],
+    techSpecs: [
+      { label: 'Scenario Type', value: 'Custom / Threat-Intel Based' },
+      { label: 'Facilitators', value: '2 Senior Instructors' },
+      { label: 'Format', value: 'Remote or On-Site' }
+    ]
   },
   {
     id: 'policy',
@@ -63,7 +87,7 @@ export const SERVICES: Service[] = [
     description: 'Strategic security governance, policy development, and vCISO services tailored to your business goals.',
     fullDescription: 'Security starts with governance. We help you build the "Paper Shield" that guides your technical controls. Our vCISO services provide high-level strategic direction without the cost of a full-time executive, ensuring your security strategy aligns with business objectives.',
     icon: FileText,
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=60',
     priority: 3,
     features: [
       'Security Roadmap Development',
@@ -78,7 +102,18 @@ export const SERVICES: Service[] = [
       'Reduced vendor-related risk',
       'Defensible security posture'
     ],
-    whoIsItFor: ['Startups needing security leadership', 'Organizations maturing their GRC function']
+    whoIsItFor: ['Startups needing security leadership', 'Organizations maturing their GRC function'],
+    deliverables: [
+      'Information Security Policy Suite',
+      'Risk Register',
+      'Vendor Assessment Framework',
+      'Board-Level Presentations'
+    ],
+    techSpecs: [
+      { label: 'Framework Alignment', value: 'NIST CSF, ISO 27001' },
+      { label: 'Availability', value: 'Retainer / Project-Based' },
+      { label: 'Review Cycle', value: 'Annual or Quarterly' }
+    ]
   },
   {
     id: 'compliance',
@@ -86,7 +121,7 @@ export const SERVICES: Service[] = [
     description: 'Guidance for ISO 27001, NIST CSF, PCI DSS, SOC 2, HIPAA, and GDPR certification readiness.',
     fullDescription: 'Navigating the alphabet soup of compliance frameworks is complex. We simplify the journey. Whether you are seeking your first SOC 2 attestation or maintaining ISO 27001 certification, our experts perform deep-dive gap analyses and guide you to audit readiness.',
     icon: CheckCircle,
-    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=60',
     priority: 4,
     features: [
       'Readiness Assessments (Mock Audits)',
@@ -101,7 +136,18 @@ export const SERVICES: Service[] = [
       'Streamline audit processes',
       'Demonstrate trust to stakeholders'
     ],
-    whoIsItFor: ['SaaS providers', 'Healthcare organizations', 'Merchants handling credit card data']
+    whoIsItFor: ['SaaS providers', 'Healthcare organizations', 'Merchants handling credit card data'],
+    deliverables: [
+      'Gap Assessment Report',
+      'Remediation Roadmap',
+      'System Security Plan (SSP)',
+      'Evidence Collection Matrix'
+    ],
+    techSpecs: [
+      { label: 'Supported Frameworks', value: 'SOC2, ISO, PCI, HIPAA' },
+      { label: 'Audit Partner', value: 'Coordination with AICPA Firms' },
+      { label: 'Tooling', value: 'Drata / Vanta / Manual' }
+    ]
   },
   {
     id: 'phishing',
@@ -109,7 +155,7 @@ export const SERVICES: Service[] = [
     description: 'Employee education programs and simulated phishing campaigns to harden your human firewall.',
     fullDescription: 'Humans are often the weakest link. Our comprehensive awareness programs combine engaging training modules with ruthless simulated phishing campaigns to condition your workforce to spot and report threats.',
     icon: Fish,
-    image: 'https://images.unsplash.com/photo-1614064641938-3e858a915f32?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1614064641938-3e858a915f32?auto=format&fit=crop&w=800&q=60',
     priority: 5,
     features: [
       'Customized Spear-Phishing Campaigns',
@@ -123,7 +169,18 @@ export const SERVICES: Service[] = [
       'Meet compliance training requirements',
       'Turn employees into sensors'
     ],
-    whoIsItFor: ['All organizations', 'High-turnover workforces']
+    whoIsItFor: ['All organizations', 'High-turnover workforces'],
+    deliverables: [
+      'Regular Campaign Reports',
+      'High-Risk User Identification',
+      'Training Certificate',
+      'Custom Landing Pages'
+    ],
+    techSpecs: [
+      { label: 'Frequency', value: 'Monthly / Quarterly' },
+      { label: 'Payload Types', value: 'Credential Harvest, Attachment' },
+      { label: 'Reporting', value: 'User Behavior Analytics' }
+    ]
   },
   {
     id: 'vuln-mgmt',
@@ -131,7 +188,7 @@ export const SERVICES: Service[] = [
     description: 'Continuous scanning and remediation prioritization to reduce your attack surface.',
     fullDescription: 'New vulnerabilities are discovered daily. Our service provides continuous visibility into your weaknesses. We don’t just hand you a scan report; we help prioritize remediation based on real-world risk and exploitability.',
     icon: ScanEye,
-    image: 'https://images.unsplash.com/photo-1563206767-5b1d97299337?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1563206767-5b1d97299337?auto=format&fit=crop&w=800&q=60',
     priority: 6,
     features: [
       'Continuous Asset Discovery',
@@ -145,7 +202,18 @@ export const SERVICES: Service[] = [
       'Visibility into "Shadow IT"',
       'Data-driven security hardening'
     ],
-    whoIsItFor: ['Organizations with complex IT estates', 'Software development houses']
+    whoIsItFor: ['Organizations with complex IT estates', 'Software development houses'],
+    deliverables: [
+      'Prioritized Remediation Lists',
+      'Executive Risk Scorecards',
+      'Scan Validation Reports',
+      'Asset Inventory Export'
+    ],
+    techSpecs: [
+      { label: 'Scanner', value: 'Tenable / Qualys / Rapid7' },
+      { label: 'Coverage', value: 'Internal / External IPs' },
+      { label: 'Frequency', value: 'Weekly / Continuous' }
+    ]
   },
   {
     id: 'cloud',
@@ -153,7 +221,7 @@ export const SERVICES: Service[] = [
     description: 'Securing cloud-native environments (AWS, Azure, GCP) and on-premise infrastructure.',
     fullDescription: 'The cloud moves fast, and misconfigurations are common. We secure your cloud footprint using best practices (CSPM) and secure your on-premise backbone, ensuring a consistent security posture across hybrid environments.',
     icon: Cloud,
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=60',
     priority: 7,
     features: [
       'Cloud Configuration Reviews (AWS/Azure/GCP)',
@@ -167,7 +235,18 @@ export const SERVICES: Service[] = [
       'Manage hybrid complexity',
       'Automated security guardrails'
     ],
-    whoIsItFor: ['Cloud-native companies', 'Hybrid enterprises']
+    whoIsItFor: ['Cloud-native companies', 'Hybrid enterprises'],
+    deliverables: [
+      'CSPM Dashboard Access',
+      'Architecture Diagrams',
+      'Infrastructure-as-Code (IaC) Review',
+      'Misconfiguration Alerts'
+    ],
+    techSpecs: [
+      { label: 'Platforms', value: 'AWS, Azure, GCP' },
+      { label: 'Compliance', value: 'CIS Benchmarks' },
+      { label: 'Tech Stack', value: 'Terraform, K8s, Docker' }
+    ]
   },
   {
     id: 'siem',
@@ -175,7 +254,7 @@ export const SERVICES: Service[] = [
     description: 'Centralized log management and correlation to detect subtle indicators of compromise.',
     fullDescription: 'Logs are the source of truth. We implement and tune SIEM solutions to aggregate data from endpoints, networks, and cloud services, applying correlation rules to find the "needle in the haystack."',
     icon: Activity,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=60',
     priority: 8,
     features: [
       'Log Aggregation & Normalization',
@@ -189,7 +268,96 @@ export const SERVICES: Service[] = [
       'Satisfy audit log retention rules',
       'Context-aware alerting'
     ],
-    whoIsItFor: ['Organizations with diverse IT assets', 'Compliance-driven entities']
+    whoIsItFor: ['Organizations with diverse IT assets', 'Compliance-driven entities'],
+    deliverables: [
+      'Centralized Log Repository',
+      'Custom Alert Ruleset',
+      'Compliance Reports (PCI, HIPAA)',
+      'System Health Metrics'
+    ],
+    techSpecs: [
+      { label: 'EPS Capacity', value: 'Scalable to 100k+ EPS' },
+      { label: 'Storage', value: 'Hot/Warm/Cold Tiering' },
+      { label: 'Parsers', value: 'Custom & Pre-built' }
+    ]
+  },
+  {
+    id: 'ai-solutions',
+    title: 'Personalized AI Solutions for Businesses',
+    description: 'Secure, locally-deployed AI trained on your company data — a single intelligent hub for employees to resolve issues, access knowledge, and streamline workflows.',
+    fullDescription: 'Stop sending your sensitive business knowledge to third-party AI vendors. Our Personalized AI Solutions deploy a private, on-premise Large Language Model (LLM) trained exclusively on your legacy documents, SOPs, HR guides, and operational data. The result is a powerful, company-specific AI assistant that gives employees instant, accurate answers — with zero data leaving your walls.',
+    icon: Brain,
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=800&q=60',
+    priority: 9,
+    features: [
+      'Secure On-Premise / Private Cloud Deployment',
+      'Custom LLM Fine-Tuned on Company Data',
+      'Centralized Employee Knowledge Hub',
+      'Workflow Automation & Issue Resolution',
+      'Role-Based Access Control (RBAC)'
+    ],
+    benefits: [
+      'Eliminate data leakage to external AI services',
+      'Dramatically accelerate employee decision-making',
+      'Reduce IT helpdesk and support ticket volume',
+      'Preserve and operationalize institutional knowledge'
+    ],
+    whoIsItFor: [
+      'Enterprises with sensitive internal knowledge bases',
+      'Organizations concerned about AI data privacy',
+      'Companies with high support/helpdesk overhead',
+      'Teams managing complex SOPs and documentation'
+    ],
+    deliverables: [
+      'Private LLM Deployment & Configuration',
+      'Data Ingestion & Embedding Pipeline',
+      'Employee-Facing Chat Interface',
+      'Admin Dashboard & Usage Analytics'
+    ],
+    techSpecs: [
+      { label: 'Deployment Model', value: 'On-Premise / Private Cloud' },
+      { label: 'Base Model', value: 'Open-Source LLM (e.g., LLaMA 3)' },
+      { label: 'Data Privacy', value: 'Zero External Data Transfer' }
+    ]
+  },
+  {
+    id: 'ai-cameras',
+    title: 'AI-Enabled Security Cameras',
+    description: 'Real-time CCTV feed analysis using AI to detect new person entries, generate instant alerts, and produce intelligent security reports — without manual review.',
+    fullDescription: 'Transform your existing CCTV infrastructure into an intelligent, always-on security layer. Our AI-Enabled Security Camera solution processes live video feeds in real-time, instantly detecting new individuals entering designated premises. Automated alerts are dispatched to security personnel and stakeholders, while intelligent reports provide full audit trails and behavioral analytics — dramatically reducing response times and eliminating surveillance fatigue.',
+    icon: Camera,
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60',
+    priority: 10,
+    features: [
+      'Real-Time Intruder & Person Detection',
+      'Instant Multi-Channel Alerts (Email, SMS, App)',
+      'Behavioral Analytics & Anomaly Detection',
+      'Automated Incident Report Generation',
+      'Integration with Existing CCTV Infrastructure'
+    ],
+    benefits: [
+      'Eliminate manual video monitoring overhead',
+      'Dramatically reduce incident response time',
+      'Maintain continuous, uninterrupted surveillance',
+      'Generate compliance-ready audit trails automatically'
+    ],
+    whoIsItFor: [
+      'Facilities with physical security requirements',
+      'Warehouses, data centers, and secure offices',
+      'Retail & hospitality with high foot-traffic',
+      'Organizations requiring compliance audit trails'
+    ],
+    deliverables: [
+      'AI Vision Model Integration & Configuration',
+      'Real-Time Alert System Setup',
+      'Security Operations Dashboard Access',
+      'Monthly Automated Surveillance Reports'
+    ],
+    techSpecs: [
+      { label: 'Detection Latency', value: '< 2 Seconds' },
+      { label: 'Camera Compatibility', value: 'RTSP / ONVIF Standard' },
+      { label: 'Deployment', value: 'On-Premise Edge / Cloud' }
+    ]
   }
 ];
 
@@ -208,7 +376,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['C-Suite Executives', 'Legal & PR', 'IT Leadership', 'Security Managers'],
     format: 'Tabletop',
     duration: '2 - 4 Hours',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Concept Development', description: 'Define objectives and high-level scenario logic.' },
       { step: 'MSEL Creation', description: 'Scripting hypothetical injects to spark discussion.' },
@@ -219,7 +387,9 @@ export const EXERCISES: Exercise[] = [
       'Low cost, high value process validation',
       'Aligns business and technical expectations',
       'No disruption to operational systems'
-    ]
+    ],
+    prerequisites: ['Existing Incident Response Plan (Draft or Final)'],
+    outcomes: ['Documented gaps', 'Actionable improvement roadmap']
   },
   {
     id: 'ransomware',
@@ -235,7 +405,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['Crisis Management Team', 'IT Operations', 'Legal Counsel'],
     format: 'Tabletop / Functional Hybrid',
     duration: '4 Hours',
-    image: 'https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Initial Planning', description: 'Identify specific ransomware TTPs to emulate.' },
       { step: 'Mid-Term Planning', description: 'Prepare simulated ransom notes and encrypted file artifacts.' },
@@ -246,7 +416,9 @@ export const EXERCISES: Exercise[] = [
       'Prepares leadership for high-pressure extortion decisions',
       'Validates the efficacy of backup strategies',
       'Clarifies legal and insurance stance'
-    ]
+    ],
+    prerequisites: ['Backup & Recovery Documentation', 'Legal Counsel Availability'],
+    outcomes: ['Ransomware Playbook refinement', 'Recovery Time Objective (RTO) validation']
   },
   {
     id: 'incident-response',
@@ -262,7 +434,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['SOC Analysts', 'Network Engineers', 'System Administrators'],
     format: 'Functional Drill',
     duration: '1 Day',
-    image: 'https://images.unsplash.com/photo-1558494949-efc02570fbc9?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1558494949-efc02570fbc9?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Scenario Design', description: 'Selecting specific technical IoCs (e.g., beaconing malware).' },
       { step: 'Technical Setup', description: 'Configuring the range or isolated subnet.' },
@@ -273,7 +445,9 @@ export const EXERCISES: Exercise[] = [
       'Metrics-driven assessment of SOC performance',
       'Identifies tool misconfigurations',
       'Improves technical response speed'
-    ]
+    ],
+    prerequisites: ['Access to SIEM/EDR consoles', 'Authorized testing window'],
+    outcomes: ['Detection logic tuning', 'Improved MTTD/MTTR metrics']
   },
   {
     id: 'phishing-sim',
@@ -289,7 +463,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['All Employees', 'Specific Departments (HR, Finance)'],
     format: 'Full-Scale Simulation',
     duration: '1 - 2 Weeks',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Reconnaissance', description: 'Gathering OSINT to craft believable emails.' },
       { step: 'Campaign Launch', description: 'Sending benign payload emails to targets.' },
@@ -300,7 +474,9 @@ export const EXERCISES: Exercise[] = [
       'Hardens the "human firewall"',
       'Provides tangible risk metrics for HR and Risk teams',
       'Reduces likelihood of successful credential theft'
-    ]
+    ],
+    prerequisites: ['Allow-listing of simulation domains'],
+    outcomes: ['User risk scoring', 'Targeted training assignments']
   },
   {
     id: 'crisis-management',
@@ -316,7 +492,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['Board of Directors', 'C-Suite', 'Public Relations'],
     format: 'Tabletop',
     duration: '3 Hours',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Scenario Mapping', description: 'Mapping cyber events to business KPIs.' },
       { step: 'Inject Delivery', description: 'News updates, stock ticker drops, regulator calls.' },
@@ -327,7 +503,9 @@ export const EXERCISES: Exercise[] = [
       'Protects brand reputation during crisis',
       'Ensures regulatory compliance at the highest level',
       'Unifies executive communication strategy'
-    ]
+    ],
+    prerequisites: ['Crisis Communication Plan'],
+    outcomes: ['Crisis Comm template refinement', 'Executive confidence']
   },
   {
     id: 'blue-team',
@@ -343,7 +521,7 @@ export const EXERCISES: Exercise[] = [
     participants: ['Security Operations Center (SOC)', 'Threat Hunters'],
     format: 'Full-Scale Simulation',
     duration: '2 Days',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=60',
     methodology: [
       { step: 'Rules of Engagement', description: 'Strict definitions of scope to prevent real downtime.' },
       { step: 'Infiltration', description: 'Red Team attempts stealthy access and lateral movement.' },
@@ -354,6 +532,8 @@ export const EXERCISES: Exercise[] = [
       'Realistic stress test of entire security apparatus',
       'Validates investment in security tools',
       'Significantly matures detection logic'
-    ]
+    ],
+    prerequisites: ['Mature SOC', 'Full network visibility'],
+    outcomes: ['Detailed attack path analysis', 'Detection engineering roadmap']
   }
 ];

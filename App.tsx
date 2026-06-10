@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -9,6 +9,9 @@ import ExercisesPage from './pages/ExercisesPage';
 import ExerciseDetail from './pages/ExerciseDetail';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import SLA from './pages/SLA';
 import CyberBackground from './components/CyberBackground';
 import { AnimatePresence } from 'framer-motion';
 
@@ -35,7 +38,7 @@ const App: React.FC = () => {
   const toggleTheme = () => setDarkMode(!darkMode);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <CyberBackground />
       <div className="flex flex-col min-h-screen relative z-10">
@@ -50,12 +53,15 @@ const App: React.FC = () => {
               <Route path="/exercises/:id" element={<ExerciseDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/sla" element={<SLA />} />
             </Routes>
           </AnimatePresence>
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

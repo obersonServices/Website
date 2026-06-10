@@ -11,6 +11,9 @@ export interface Service {
   benefits: string[];
   whoIsItFor: string[];
   priority: number;
+  // New fields for detailed overview
+  deliverables: string[];
+  techSpecs: { label: string; value: string }[];
 }
 
 export interface Exercise {
@@ -23,8 +26,11 @@ export interface Exercise {
   format: 'Tabletop' | 'Functional Drill' | 'Full-Scale Simulation' | 'Tabletop / Functional Hybrid';
   duration: string;
   image: string;
-  methodology: { step: string; description: string }[]; // Derived from Playbook planning cycle
+  methodology: { step: string; description: string }[];
   businessValue: string[];
+  // New fields for detailed overview
+  prerequisites: string[];
+  outcomes: string[];
 }
 
 export interface NavItem {
